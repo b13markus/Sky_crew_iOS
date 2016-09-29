@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		517FFB771D9D03B4007CD10E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB761D9D03B4007CD10E /* main.m */; };
+		517FFB7A1D9D03B4007CD10E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB791D9D03B4007CD10E /* AppDelegate.m */; };
+		517FFB7D1D9D03B4007CD10E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB7C1D9D03B4007CD10E /* ViewController.m */; };
+		517FFB801D9D03B4007CD10E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517FFB7E1D9D03B4007CD10E /* Main.storyboard */; };
+		517FFB831D9D03B4007CD10E /* SkyCrew.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB811D9D03B4007CD10E /* SkyCrew.xcdatamodeld */; };
+		517FFB851D9D03B4007CD10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517FFB841D9D03B4007CD10E /* Assets.xcassets */; };
+		517FFB881D9D03B4007CD10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517FFB861D9D03B4007CD10E /* LaunchScreen.storyboard */; };
+		517FFB911D9D0475007CD10E /* SCCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB901D9D0475007CD10E /* SCCoreDataManager.m */; };
+		517FFB981D9D3956007CD10E /* SCRegistrationFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB971D9D3956007CD10E /* SCRegistrationFormVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		517FFB721D9D03B4007CD10E /* SkyCrew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyCrew.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		517FFB761D9D03B4007CD10E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		517FFB781D9D03B4007CD10E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		517FFB791D9D03B4007CD10E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		517FFB7B1D9D03B4007CD10E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		517FFB7C1D9D03B4007CD10E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		517FFB7F1D9D03B4007CD10E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		517FFB821D9D03B4007CD10E /* SkyCrew.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkyCrew.xcdatamodel; sourceTree = "<group>"; };
+		517FFB841D9D03B4007CD10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		517FFB871D9D03B4007CD10E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		517FFB891D9D03B4007CD10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		517FFB8F1D9D0475007CD10E /* SCCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCCoreDataManager.h; path = Model/SCCoreDataManager.h; sourceTree = "<group>"; };
+		517FFB901D9D0475007CD10E /* SCCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCCoreDataManager.m; path = Model/SCCoreDataManager.m; sourceTree = "<group>"; };
+		517FFB961D9D3956007CD10E /* SCRegistrationFormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCRegistrationFormVC.h; path = Controller/SCRegistrationFormVC.h; sourceTree = "<group>"; };
+		517FFB971D9D3956007CD10E /* SCRegistrationFormVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRegistrationFormVC.m; path = Controller/SCRegistrationFormVC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		517FFB6F1D9D03B4007CD10E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		517FFB691D9D03B4007CD10E = {
+			isa = PBXGroup;
+			children = (
+				517FFB741D9D03B4007CD10E /* SkyCrew */,
+				517FFB731D9D03B4007CD10E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		517FFB731D9D03B4007CD10E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				517FFB721D9D03B4007CD10E /* SkyCrew.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		517FFB741D9D03B4007CD10E /* SkyCrew */ = {
+			isa = PBXGroup;
+			children = (
+				517FFB921D9D047D007CD10E /* Model */,
+				517FFB941D9D078C007CD10E /* View */,
+				517FFB951D9D0796007CD10E /* Controller */,
+				517FFB891D9D03B4007CD10E /* Info.plist */,
+				517FFB751D9D03B4007CD10E /* Supporting Files */,
+			);
+			path = SkyCrew;
+			sourceTree = "<group>";
+		};
+		517FFB751D9D03B4007CD10E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				517FFB761D9D03B4007CD10E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		517FFB921D9D047D007CD10E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				517FFB811D9D03B4007CD10E /* SkyCrew.xcdatamodeld */,
+				517FFB8F1D9D0475007CD10E /* SCCoreDataManager.h */,
+				517FFB901D9D0475007CD10E /* SCCoreDataManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		517FFB941D9D078C007CD10E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				517FFB7E1D9D03B4007CD10E /* Main.storyboard */,
+				517FFB841D9D03B4007CD10E /* Assets.xcassets */,
+				517FFB861D9D03B4007CD10E /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		517FFB951D9D0796007CD10E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				517FFB781D9D03B4007CD10E /* AppDelegate.h */,
+				517FFB791D9D03B4007CD10E /* AppDelegate.m */,
+				517FFB961D9D3956007CD10E /* SCRegistrationFormVC.h */,
+				517FFB971D9D3956007CD10E /* SCRegistrationFormVC.m */,
+				517FFB7B1D9D03B4007CD10E /* ViewController.h */,
+				517FFB7C1D9D03B4007CD10E /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		517FFB711D9D03B4007CD10E /* SkyCrew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 517FFB8C1D9D03B4007CD10E /* Build configuration list for PBXNativeTarget "SkyCrew" */;
+			buildPhases = (
+				517FFB6E1D9D03B4007CD10E /* Sources */,
+				517FFB6F1D9D03B4007CD10E /* Frameworks */,
+				517FFB701D9D03B4007CD10E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkyCrew;
+			productName = SkyCrew;
+			productReference = 517FFB721D9D03B4007CD10E /* SkyCrew.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		517FFB6A1D9D03B4007CD10E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = StarApps;
+				TargetAttributes = {
+					517FFB711D9D03B4007CD10E = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 517FFB6D1D9D03B4007CD10E /* Build configuration list for PBXProject "SkyCrew" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 517FFB691D9D03B4007CD10E;
+			productRefGroup = 517FFB731D9D03B4007CD10E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				517FFB711D9D03B4007CD10E /* SkyCrew */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		517FFB701D9D03B4007CD10E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517FFB881D9D03B4007CD10E /* LaunchScreen.storyboard in Resources */,
+				517FFB851D9D03B4007CD10E /* Assets.xcassets in Resources */,
+				517FFB801D9D03B4007CD10E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		517FFB6E1D9D03B4007CD10E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				517FFB831D9D03B4007CD10E /* SkyCrew.xcdatamodeld in Sources */,
+				517FFB981D9D3956007CD10E /* SCRegistrationFormVC.m in Sources */,
+				517FFB911D9D0475007CD10E /* SCCoreDataManager.m in Sources */,
+				517FFB7D1D9D03B4007CD10E /* ViewController.m in Sources */,
+				517FFB7A1D9D03B4007CD10E /* AppDelegate.m in Sources */,
+				517FFB771D9D03B4007CD10E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		517FFB7E1D9D03B4007CD10E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				517FFB7F1D9D03B4007CD10E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		517FFB861D9D03B4007CD10E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				517FFB871D9D03B4007CD10E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		517FFB8A1D9D03B4007CD10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		517FFB8B1D9D03B4007CD10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		517FFB8D1D9D03B4007CD10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SkyCrew/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SA.SkyCrew;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		517FFB8E1D9D03B4007CD10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SkyCrew/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SA.SkyCrew;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		517FFB6D1D9D03B4007CD10E /* Build configuration list for PBXProject "SkyCrew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				517FFB8A1D9D03B4007CD10E /* Debug */,
+				517FFB8B1D9D03B4007CD10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		517FFB8C1D9D03B4007CD10E /* Build configuration list for PBXNativeTarget "SkyCrew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				517FFB8D1D9D03B4007CD10E /* Debug */,
+				517FFB8E1D9D03B4007CD10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		517FFB811D9D03B4007CD10E /* SkyCrew.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				517FFB821D9D03B4007CD10E /* SkyCrew.xcdatamodel */,
+			);
+			currentVersion = 517FFB821D9D03B4007CD10E /* SkyCrew.xcdatamodel */;
+			path = SkyCrew.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 517FFB6A1D9D03B4007CD10E /* Project object */;
+}
