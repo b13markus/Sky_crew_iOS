@@ -1,48 +1,37 @@
 //
-//  SCRegistrationFormVC.m
+//  SCLoginVC.m
 //  SkyCrew
 //
-//  Created by Yuriy Lubinets on 9/29/16.
+//  Created by Yuriy Lubinets on 9/30/16.
 //  Copyright © 2016 StarApps. All rights reserved.
 //
 
+#import "SCLoginVC.h"
 #import "SCRegistrationFormVC.h"
+#import "SCServerManager.h"
 
-@interface SCRegistrationFormVC ()
+@interface SCLoginVC ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *userPhotoImageView;
-@property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *emailAdressTextField;
+@property (weak, nonatomic) IBOutlet UITextField *loginTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
-@property (weak, nonatomic) IBOutlet UIButton *checkBoxButton;
-@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
-@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttonOutlets;
 @property (assign, nonatomic) BOOL keyboardIsVisible;
 
 @end
 
-@implementation SCRegistrationFormVC
-
-#pragma mark - View LifeCycle
+@implementation SCLoginVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self makeCornerRoundingForElement:self.userPhotoImageView];
-    [self makeCornerRoundingForElement:self.firstNameTextField];
-    [self makeCornerRoundingForElement:self.lastNameTextField];
-    [self makeCornerRoundingForElement:self.emailAdressTextField];
-    [self makeCornerRoundingForElement:self.passwordTextField];
-    [self makeCornerRoundingForElement:self.confirmPasswordTextField];
-    [self makeCornerRoundingForElement:self.cancelButton];
-    [self makeCornerRoundingForElement:self.submitButton];
-
-
     [self.backgroundImageView setImage:[UIImage imageNamed:@"background2"]];
+    [self makeCornerRoundingForElement:self.loginTextField];
+    [self makeCornerRoundingForElement:self.passwordTextField];
     
+    for (UIButton* button in self.buttonOutlets) {
+        [self makeCornerRoundingForElement:button];
+    }
     [self setGestureRecognizer];
     self.keyboardIsVisible = NO;
     
@@ -56,12 +45,14 @@
                                              selector:@selector(keyboardDidHide:)
                                                  name:UIKeyboardDidHideNotification
                                                object:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (void) makeCornerRoundingForElement:(id)element {
     
@@ -77,16 +68,10 @@
     } else if ([element isKindOfClass:[UIButton class]]) {
         
         UIButton* buttonElement = element;
-
+        
         [buttonElement.layer setCornerRadius:5.0];
         [buttonElement.layer setMasksToBounds:YES];
         
-    } else if ([element isKindOfClass:[UIImageView class]]) {
-        
-        UIImageView* imageViewElement = element;
-
-        [imageViewElement.layer setCornerRadius:5.0];
-        [imageViewElement.layer setMasksToBounds:YES];
     }
 }
 
@@ -103,40 +88,55 @@
 #pragma mark - Hide Keyboard
 
 - (void) setGestureRecognizer {
-
+    
     UIGestureRecognizer *tapper;
-
+    
     tapper = [[UITapGestureRecognizer alloc]
               initWithTarget:self action:@selector(handleSingleTap:)];
     tapper.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapper];
-
+    
 }
 
 - (void) handleSingleTap:(UITapGestureRecognizer *) sender {
-
+    
     [self.view endEditing:YES];
 }
 
 
-#pragma mark - Actions
+#pragma mark - Segue
 
-- (IBAction)checkBoxAction:(UIButton *)sender {
-    
-    if (sender.selected) {
-        
-        sender.selected = NO;
-        
-    } else {
-        
-        sender.selected = YES;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"segueToRegisterView"]) {
+
+        SCRegistrationFormVC *vc = [segue destinationViewController];
+
+        [vc setRegistrationType:(SCRegistrationFormVCType)[sender integerValue]];
     }
 }
-- (IBAction)cancelAction:(UIButton *)sender {
+
+
+#pragma  mark - Actions
+
+- (IBAction)loginAction:(UIButton *)sender {
+    
+    [[SCServerManager sharedManager]loginUserWithEmail:self.loginTextField.text
+                                           andPassword:self.passwordTextField.text onSuccess:^{
+    
+    
+                                           } onFailure:^{
+    
+    
+                                           }];
 }
-- (IBAction)submitAction:(UIButton *)sender {
+- (IBAction)forgotPasswordAction:(UIButton *)sender {
 }
-- (IBAction)changeUserPhotoAction:(UIButton *)sender {
+
+- (IBAction)registerAsCrewAction:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"segueToRegisterView" sender:[NSNumber numberWithInteger:SCRegistrationFormVCTypeCrew]];
+}
+- (IBAction)registerAsFamilyAction:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"segueToRegisterView" sender:[NSNumber numberWithInteger:SCRegistrationFormVCTypeFamily]];
 }
 
 

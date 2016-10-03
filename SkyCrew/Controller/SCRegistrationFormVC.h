@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    
+    SCRegistrationFormVCTypeCrew,
+    SCRegistrationFormVCTypeFamily,
+    
+} SCRegistrationFormVCType;
+
 @interface SCRegistrationFormVC : UIViewController
+
+@property (assign, nonatomic) SCRegistrationFormVCType registrationType;
 
 @end

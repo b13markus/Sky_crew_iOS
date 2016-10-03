@@ -16,9 +16,15 @@
 		517FFB881D9D03B4007CD10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517FFB861D9D03B4007CD10E /* LaunchScreen.storyboard */; };
 		517FFB911D9D0475007CD10E /* SCCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB901D9D0475007CD10E /* SCCoreDataManager.m */; };
 		517FFB981D9D3956007CD10E /* SCRegistrationFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB971D9D3956007CD10E /* SCRegistrationFormVC.m */; };
+		517FFB9B1D9E60C2007CD10E /* SCLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB9A1D9E60C2007CD10E /* SCLoginVC.m */; };
+		517FFB9E1D9E7595007CD10E /* SCServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB9D1D9E7595007CD10E /* SCServerManager.m */; };
+		517FFBA71D9EBB8F007CD10E /* AFNetworkActivityConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFBA31D9EBB8F007CD10E /* AFNetworkActivityConsoleLogger.m */; };
+		517FFBA81D9EBB8F007CD10E /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFBA51D9EBB8F007CD10E /* AFNetworkActivityLogger.m */; };
+		6ACFEA7EFD9E615BAAEB3D46 /* libPods-SkyCrew.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB3F0BDA7F2CF79A2FF2327 /* libPods-SkyCrew.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29A6EA778280FAD132F6B6EB /* Pods-SkyCrew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyCrew.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkyCrew/Pods-SkyCrew.release.xcconfig"; sourceTree = "<group>"; };
 		517FFB721D9D03B4007CD10E /* SkyCrew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyCrew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517FFB761D9D03B4007CD10E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		517FFB781D9D03B4007CD10E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -34,6 +40,17 @@
 		517FFB901D9D0475007CD10E /* SCCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCCoreDataManager.m; path = Model/SCCoreDataManager.m; sourceTree = "<group>"; };
 		517FFB961D9D3956007CD10E /* SCRegistrationFormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCRegistrationFormVC.h; path = Controller/SCRegistrationFormVC.h; sourceTree = "<group>"; };
 		517FFB971D9D3956007CD10E /* SCRegistrationFormVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRegistrationFormVC.m; path = Controller/SCRegistrationFormVC.m; sourceTree = "<group>"; };
+		517FFB991D9E60C2007CD10E /* SCLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCLoginVC.h; path = Controller/SCLoginVC.h; sourceTree = "<group>"; };
+		517FFB9A1D9E60C2007CD10E /* SCLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCLoginVC.m; path = Controller/SCLoginVC.m; sourceTree = "<group>"; };
+		517FFB9C1D9E7595007CD10E /* SCServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCServerManager.h; path = Model/SCServerManager.h; sourceTree = "<group>"; };
+		517FFB9D1D9E7595007CD10E /* SCServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCServerManager.m; path = Model/SCServerManager.m; sourceTree = "<group>"; };
+		517FFBA21D9EBB8F007CD10E /* AFNetworkActivityConsoleLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityConsoleLogger.h; path = frameworks/AFNetworkActivityConsoleLogger.h; sourceTree = "<group>"; };
+		517FFBA31D9EBB8F007CD10E /* AFNetworkActivityConsoleLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityConsoleLogger.m; path = frameworks/AFNetworkActivityConsoleLogger.m; sourceTree = "<group>"; };
+		517FFBA41D9EBB8F007CD10E /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityLogger.h; path = frameworks/AFNetworkActivityLogger.h; sourceTree = "<group>"; };
+		517FFBA51D9EBB8F007CD10E /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityLogger.m; path = frameworks/AFNetworkActivityLogger.m; sourceTree = "<group>"; };
+		517FFBA61D9EBB8F007CD10E /* AFNetworkActivityLoggerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityLoggerProtocol.h; path = frameworks/AFNetworkActivityLoggerProtocol.h; sourceTree = "<group>"; };
+		A5275F6B5D8ED7ED4A537A06 /* Pods-SkyCrew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyCrew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyCrew/Pods-SkyCrew.debug.xcconfig"; sourceTree = "<group>"; };
+		EAB3F0BDA7F2CF79A2FF2327 /* libPods-SkyCrew.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyCrew.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +58,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ACFEA7EFD9E615BAAEB3D46 /* libPods-SkyCrew.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490BD9E1E26ADCEF1DC7FD88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				517FFBA21D9EBB8F007CD10E /* AFNetworkActivityConsoleLogger.h */,
+				517FFBA31D9EBB8F007CD10E /* AFNetworkActivityConsoleLogger.m */,
+				517FFBA41D9EBB8F007CD10E /* AFNetworkActivityLogger.h */,
+				517FFBA51D9EBB8F007CD10E /* AFNetworkActivityLogger.m */,
+				517FFBA61D9EBB8F007CD10E /* AFNetworkActivityLoggerProtocol.h */,
+				EAB3F0BDA7F2CF79A2FF2327 /* libPods-SkyCrew.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		517FFB691D9D03B4007CD10E = {
 			isa = PBXGroup;
 			children = (
 				517FFB741D9D03B4007CD10E /* SkyCrew */,
 				517FFB731D9D03B4007CD10E /* Products */,
+				F93660DB3D677323CEA06BE4 /* Pods */,
+				490BD9E1E26ADCEF1DC7FD88 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +122,8 @@
 				517FFB811D9D03B4007CD10E /* SkyCrew.xcdatamodeld */,
 				517FFB8F1D9D0475007CD10E /* SCCoreDataManager.h */,
 				517FFB901D9D0475007CD10E /* SCCoreDataManager.m */,
+				517FFB9C1D9E7595007CD10E /* SCServerManager.h */,
+				517FFB9D1D9E7595007CD10E /* SCServerManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -110,10 +145,21 @@
 				517FFB791D9D03B4007CD10E /* AppDelegate.m */,
 				517FFB961D9D3956007CD10E /* SCRegistrationFormVC.h */,
 				517FFB971D9D3956007CD10E /* SCRegistrationFormVC.m */,
+				517FFB991D9E60C2007CD10E /* SCLoginVC.h */,
+				517FFB9A1D9E60C2007CD10E /* SCLoginVC.m */,
 				517FFB7B1D9D03B4007CD10E /* ViewController.h */,
 				517FFB7C1D9D03B4007CD10E /* ViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		F93660DB3D677323CEA06BE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5275F6B5D8ED7ED4A537A06 /* Pods-SkyCrew.debug.xcconfig */,
+				29A6EA778280FAD132F6B6EB /* Pods-SkyCrew.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 517FFB8C1D9D03B4007CD10E /* Build configuration list for PBXNativeTarget "SkyCrew" */;
 			buildPhases = (
+				9B81E06598EC39C2CC981569 /* [CP] Check Pods Manifest.lock */,
 				517FFB6E1D9D03B4007CD10E /* Sources */,
 				517FFB6F1D9D03B4007CD10E /* Frameworks */,
 				517FFB701D9D03B4007CD10E /* Resources */,
+				BEE5A6816B3BDFB699FDBD3D /* [CP] Embed Pods Frameworks */,
+				F2DDAC0A86AFECED43FD034A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,15 +230,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9B81E06598EC39C2CC981569 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BEE5A6816B3BDFB699FDBD3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyCrew/Pods-SkyCrew-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2DDAC0A86AFECED43FD034A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyCrew/Pods-SkyCrew-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		517FFB6E1D9D03B4007CD10E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				517FFBA81D9EBB8F007CD10E /* AFNetworkActivityLogger.m in Sources */,
 				517FFB831D9D03B4007CD10E /* SkyCrew.xcdatamodeld in Sources */,
 				517FFB981D9D3956007CD10E /* SCRegistrationFormVC.m in Sources */,
+				517FFBA71D9EBB8F007CD10E /* AFNetworkActivityConsoleLogger.m in Sources */,
 				517FFB911D9D0475007CD10E /* SCCoreDataManager.m in Sources */,
 				517FFB7D1D9D03B4007CD10E /* ViewController.m in Sources */,
+				517FFB9E1D9E7595007CD10E /* SCServerManager.m in Sources */,
+				517FFB9B1D9E60C2007CD10E /* SCLoginVC.m in Sources */,
 				517FFB7A1D9D03B4007CD10E /* AppDelegate.m in Sources */,
 				517FFB771D9D03B4007CD10E /* main.m in Sources */,
 			);
@@ -301,6 +402,7 @@
 		};
 		517FFB8D1D9D03B4007CD10E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5275F6B5D8ED7ED4A537A06 /* Pods-SkyCrew.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SkyCrew/Info.plist;
@@ -312,6 +414,7 @@
 		};
 		517FFB8E1D9D03B4007CD10E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A6EA778280FAD132F6B6EB /* Pods-SkyCrew.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SkyCrew/Info.plist;
@@ -340,6 +443,7 @@
 				517FFB8E1D9D03B4007CD10E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
