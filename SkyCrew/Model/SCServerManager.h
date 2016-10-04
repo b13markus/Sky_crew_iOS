@@ -11,8 +11,21 @@
 @interface SCServerManager : NSObject
 
 +(SCServerManager *)sharedManager;
+
 - (void) loginUserWithEmail:(NSString*)email
                 andPassword:(NSString*)password
                   onSuccess:(void (^)())success
-                  onFailure:(void(^)())failure;
+                  onFailure:(void(^)(NSString* errorResponse))failure;
+
+- (void) registerUserWithFirstName:(NSString *)firstName
+                          lastName:(NSString *)lastName
+                             email:(NSString *)email
+                          password:(NSString *)password
+               passwordConfimation:(NSString *)passwordConfimation
+                             photo:(NSData *)photo
+                             agree:(NSString *)agree
+                              type:(NSString *)type
+                         onSuccess:(void (^)())success
+                         onFailure:(void(^)())failure;
+
 @end

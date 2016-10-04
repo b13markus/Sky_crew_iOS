@@ -8,7 +8,6 @@
 
 #import "SCServerManager.h"
 #import "AFNetworking.h"
-#import "AFNetworkActivityLogger.h"
 
 @interface SCServerManager ()
 
@@ -43,86 +42,83 @@
 
 
 
-- (void) loginUserWithEmail:(NSString*)email
-              andPassword:(NSString*)password
+- (void) loginUserWithEmail:(NSString *)email
+              andPassword:(NSString *)password
                 onSuccess:(void (^)())success
-                onFailure:(void(^)())failure {
+                onFailure:(void(^)(NSString* errorResponse))failure {
     
-    self.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
-//    self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
- 
-    NSDictionary* body = @{
+    NSDictionary* params = @{
        @"email": email,
        @"password": password
     };
 
-    [self.sessionManager POST:@"login" parameters:body progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    self.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [self.sessionManager POST:@"login"
+                   parameters:params
+                     progress:nil
+                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-//        NSString *strData = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+                          NSLog(@"%@", responseObject);
+        
+                    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+                        NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+                        NSLog(@"%@",errResponse);
+                        NSLog(@"eror - %@", error);
+                    }];
+}
 
-        NSLog(@"%@", responseObject);
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",errResponse);
-        NSLog(@"eror - %@", error);
+- (void) registerUserWithFirstName:(NSString *)firstName
+                          lastName:(NSString *)lastName
+                             email:(NSString *)email
+                          password:(NSString *)password
+               passwordConfimation:(NSString *)passwordConfimation
+                             photo:(NSData *)photo
+                             agree:(NSString *)agree
+                              type:(NSString *)type
+                         onSuccess:(void (^)())success
+                         onFailure:(void(^)())failure {
 
-        
-    }];
+    NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            
+                            firstName, @"firstName",
+                            lastName, @"lastName",
+                            email, @"email",
+                            password, @"password",
+                            passwordConfimation, @"passwordConfirmation",
+                            @"", @"photo",
+                            agree, @"iAgree",
+                            type, @"type", nil];
+//    {
+//        "firstName": "nafrefme",
+//        "lastName": "reffer",
+//        "email": "someMail@gmail.com",
+//        "password": "1111",
+//        "passwordConfirmation": "1111",
+//        "photo": "",
+//        "iAgree": true,
+//        "type": "crewMember"
+//    }
+    
+    NSLog(@"params - %@", params);
+    
+    self.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [self.sessionManager POST:@"registration"
+                   parameters:params
+                     progress:nil
+                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                          
+                          NSLog(@"%@", responseObject);
+                          
+                      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                          
+                          NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+                          NSLog(@"%@",errResponse);
+                          NSLog(@"eror - %@", error);
+                      }];
+
+    
 }
 
 
-
-//- (void)getIngridientsForId:(NSString*)recipeId onSuccess:(void (^)(NSArray *ingredientsArray))success
-//                    onfailure:(void (^)(void))failure {
-//    
-//    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
-//    sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
-//    sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-//    
-//    NSDictionary* params =
-//    [NSDictionary dictionaryWithObjectsAndKeys:
-//     kAPIKey,  @"key",
-//     recipeId, @"rId", nil];
-//    
-//    [sessionManager GET:kRecipesUrlString
-//             parameters:params
-//               progress:nil
-//                success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//                    
-//                    NSDictionary *dataDictionary = [[NSDictionary alloc]init];
-//                    NSArray *ingridientsArray = [[NSArray alloc]init];
-//                    
-//                    NSError *error = nil;
-//                    id object = [NSJSONSerialization
-//                                 JSONObjectWithData:responseObject
-//                                 options:0
-//                                 error:&error];
-//                    
-//                    if(!error) {
-//                        
-//                        if ([object isKindOfClass:[NSDictionary class]]) {
-//                            dataDictionary = [object objectForKey:@"recipe"];
-//                            ingridientsArray = [dataDictionary objectForKey:@"ingredients"];
-//                        }
-//                        
-//                        if (success) {
-//                            success(ingridientsArray);
-//                        }
-//                    } else {
-//                        
-//                        if (failure) {
-//                            
-//                            failure();
-//                        }
-//                    }
-//                    
-//                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//                    
-//                    if (failure) {
-//                        failure();
-//                    }
-//                }];
-//}
 @end

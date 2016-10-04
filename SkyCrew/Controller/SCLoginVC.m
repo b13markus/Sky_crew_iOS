@@ -115,20 +115,29 @@
     }
 }
 
+- (IBAction)unwindFromLoginView:(UIStoryboardSegue *)segue {
+}
+
 
 #pragma  mark - Actions
 
 - (IBAction)loginAction:(UIButton *)sender {
     
-    [[SCServerManager sharedManager]loginUserWithEmail:self.loginTextField.text
-                                           andPassword:self.passwordTextField.text onSuccess:^{
-    
-    
-                                           } onFailure:^{
-    
-    
-                                           }];
+    if (self.loginTextField.text.length != 0 && self.passwordTextField.text.length != 0) {
+        
+        [[SCServerManager sharedManager]loginUserWithEmail:self.loginTextField.text
+                                               andPassword:self.passwordTextField.text onSuccess:^{
+                                                   
+                                                   NSLog(@"LoginSuccess");
+                                               } onFailure:^(NSString* errorResponse){
+
+//                                                    NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+                                                   NSLog(@"Loginfailure");
+                                               }];
+
+    }
 }
+
 - (IBAction)forgotPasswordAction:(UIButton *)sender {
 }
 

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SkyCrew/Model/SCServerManager.m"
-            timestampString = "496944117.849321"
+            timestampString = "497281120.485878"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "-loginUserWithEmail:andPassword:onSuccess:onFailure:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,12 +26,124 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SkyCrew/Model/SCServerManager.m"
-            timestampString = "496944117.849321"
+            timestampString = "497281120.485878"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "-loginUserWithEmail:andPassword:onSuccess:onFailure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyCrew/Model/SCServerManager.m"
+            timestampString = "497290852.291263"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-registerUserWithFirstName:lastName:email:password:passwordConfimation:photo:agree:type:onSuccess:onFailure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__126-[SCServerManager registerUserWithFirstName:lastName:email:password:passwordConfimation:photo:agree:type:onSuccess:onFailure:]_block_invoke"
+                  moduleName = "SkyCrew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuriylubinets/Documents/YuraDocuments/StarApps/SkyCrewNew/SkyCrew/Model/SCServerManager.m"
+                  timestampString = "497291221.511761"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "98">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__126-[SCServerManager registerUserWithFirstName:lastName:email:password:passwordConfimation:photo:agree:type:onSuccess:onFailure:]_block_invoke_2"
+                  moduleName = "SkyCrew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuriylubinets/Documents/YuraDocuments/StarApps/SkyCrewNew/SkyCrew/Model/SCServerManager.m"
+                  timestampString = "497291221.520365"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "75">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyCrew/Model/SCServerManager.m"
+            timestampString = "497290852.291263"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-registerUserWithFirstName:lastName:email:password:passwordConfimation:photo:agree:type:onSuccess:onFailure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyCrew/Model/SCServerManager.m"
+            timestampString = "497290840.521215"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-registerUserWithFirstName:lastName:email:password:passwordConfimation:photo:agree:type:onSuccess:onFailure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyCrew/Model/SCServerManager.m"
+            timestampString = "497290852.291263"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-registerUserWithFirstName:lastName:email:password:passwordConfimation:photo:agree:type:onSuccess:onFailure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyCrew/Model/SCServerManager.m"
+            timestampString = "497290852.291263"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-registerUserWithFirstName:lastName:email:password:passwordConfimation:photo:agree:type:onSuccess:onFailure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

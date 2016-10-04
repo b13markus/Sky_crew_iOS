@@ -7,6 +7,7 @@
 //
 
 #import "SCRegistrationFormVC.h"
+#import "SCServerManager.h"
 
 @interface SCRegistrationFormVC ()
 
@@ -118,6 +119,32 @@
     [self.view endEditing:YES];
 }
 
+#pragma mark - Privat Methods
+
+- (BOOL) checkIfAllFealdsAreFilled {
+    
+    if (self.firstNameTextField.text.length == 0) {
+        return NO;
+    }
+    if (self.lastNameTextField.text.length == 0) {
+        return NO;
+    }
+    if (self.emailAdressTextField.text.length == 0) {
+        return NO;
+    }
+    if (self.passwordTextField.text.length == 0) {
+        return NO;
+    }
+    if (self.confirmPasswordTextField.text.length == 0) {
+        return NO;
+    }
+    if (self.checkBoxButton.selected == NO) {
+        return NO;
+
+    }
+    
+    return YES;
+}
 
 #pragma mark - Actions
 
@@ -133,8 +160,42 @@
     }
 }
 - (IBAction)cancelAction:(UIButton *)sender {
+    
+    [self performSegueWithIdentifier:@"unwindFromLoginView" sender:nil];
 }
 - (IBAction)submitAction:(UIButton *)sender {
+    
+    if ([self checkIfAllFealdsAreFilled]) {
+        
+        NSData *userPhoto = [[NSData alloc]init];
+        NSString *agree = @"true";
+        NSString *type;
+        
+        if (self.registrationType == SCRegistrationFormVCTypeCrew) {
+           
+            type = @"crewMember";
+        } else {
+            
+            type = @"familyMember";
+        }
+       
+        
+        [[SCServerManager sharedManager] registerUserWithFirstName:self.firstNameTextField.text
+                                                          lastName:self.lastNameTextField.text
+                                                             email:self.emailAdressTextField.text
+                                                          password:self.passwordTextField.text
+                                               passwordConfimation:self.confirmPasswordTextField.text
+                                                             photo:userPhoto
+                                                             agree:agree
+                                                              type:type
+                                                         onSuccess:^{
+                                                             
+                                                             
+                                                         } onFailure:^{
+                                                             
+                                                             NSLog(@"Registration Fail");
+                                                         }];
+    }
 }
 - (IBAction)changeUserPhotoAction:(UIButton *)sender {
 }
