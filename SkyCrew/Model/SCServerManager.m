@@ -45,7 +45,7 @@
 - (void) loginUserWithEmail:(NSString *)email
               andPassword:(NSString *)password
                 onSuccess:(void (^)())success
-                onFailure:(void(^)(NSString* errorResponse))failure {
+                onFailure:(void(^)(NSDictionary* errorResponse))failure {
     
     NSDictionary* params = @{
        @"email": email,
@@ -53,18 +53,27 @@
     };
 
     self.sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
+    self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [self.sessionManager POST:@"login"
                    parameters:params
                      progress:nil
                       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
                           NSLog(@"%@", responseObject);
+                          
         
                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-                        NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
-                        NSLog(@"%@",errResponse);
-                        NSLog(@"eror - %@", error);
+                        NSError* parseError;
+                        NSData *responseData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+                        NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                                     options:kNilOptions
+                                                                                       error:&parseError];
+
+                        if (failure) {
+        
+                            failure(responseDict);
+                        }
                     }];
 }
 
@@ -73,11 +82,11 @@
                              email:(NSString *)email
                           password:(NSString *)password
                passwordConfimation:(NSString *)passwordConfimation
-                             photo:(NSData *)photo
+                             photo:(NSString *)photo
                              agree:(NSString *)agree
                               type:(NSString *)type
                          onSuccess:(void (^)())success
-                         onFailure:(void(^)())failure {
+                         onFailure:(void(^)(NSDictionary *errorResponse))failure {
 
     NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:
                             
@@ -89,16 +98,7 @@
                             @"", @"photo",
                             agree, @"iAgree",
                             type, @"type", nil];
-//    {
-//        "firstName": "nafrefme",
-//        "lastName": "reffer",
-//        "email": "someMail@gmail.com",
-//        "password": "1111",
-//        "passwordConfirmation": "1111",
-//        "photo": "",
-//        "iAgree": true,
-//        "type": "crewMember"
-//    }
+
     
     NSLog(@"params - %@", params);
     
@@ -109,12 +109,23 @@
                       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                           
                           NSLog(@"%@", responseObject);
+                          NSLog(@"%@", task.response.debugDescription);
+
+                          
                           
                       } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                           
-                          NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
-                          NSLog(@"%@",errResponse);
-                          NSLog(@"eror - %@", error);
+                          NSError* parseError;
+                          NSData *responseData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+                          NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                                       options:kNilOptions
+                                                                                         error:&parseError];
+                          NSLog(@"erf - %@", responseDict);
+                          
+                          if (failure) {
+                              
+                              failure(responseDict);
+                          }
                       }];
 
     

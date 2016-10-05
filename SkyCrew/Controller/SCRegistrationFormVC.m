@@ -9,7 +9,7 @@
 #import "SCRegistrationFormVC.h"
 #import "SCServerManager.h"
 
-@interface SCRegistrationFormVC ()
+@interface SCRegistrationFormVC () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *userPhotoImageView;
@@ -119,6 +119,36 @@
     [self.view endEditing:YES];
 }
 
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.userPhotoImageView.image = chosenImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Alert
+
+- (void)showAlertWithMessage:(NSString *)message {
+    
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:@""
+                                  message:message
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleCancel
+                               handler:^(UIAlertAction * action) {
+                               }];
+    [alert addAction:okButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 #pragma mark - Privat Methods
 
 - (BOOL) checkIfAllFealdsAreFilled {
@@ -167,7 +197,9 @@
     
     if ([self checkIfAllFealdsAreFilled]) {
         
-        NSData *userPhoto = [[NSData alloc]init];
+//        NSData *userPhoto = [[NSData alloc]init];
+        NSString *userPhoto = [UIImagePNGRepresentation(self.userPhotoImageView.image) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    
         NSString *agree = @"true";
         NSString *type;
         
@@ -191,13 +223,21 @@
                                                          onSuccess:^{
                                                              
                                                              
-                                                         } onFailure:^{
+                                                         } onFailure:^(NSDictionary* errorResponse){
                                                              
-                                                             NSLog(@"Registration Fail");
+                                                             NSString *errorMessage = [errorResponse objectForKey:@"message"];
+                                                             [self showAlertWithMessage:errorMessage];
                                                          }];
     }
 }
 - (IBAction)changeUserPhotoAction:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:nil];
 }
 
 

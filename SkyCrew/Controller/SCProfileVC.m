@@ -1,27 +1,27 @@
 //
-//  ViewController.m
+//  SCProfileVC.m
 //  SkyCrew
 //
-//  Created by Yuriy Lubinets on 9/29/16.
+//  Created by Yuriy Lubinets on 10/5/16.
 //  Copyright © 2016 StarApps. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SCProfileVC.h"
 
-@interface ViewController ()
+@interface SCProfileVC ()
 
 @end
 
-@implementation ViewController
+@implementation SCProfileVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

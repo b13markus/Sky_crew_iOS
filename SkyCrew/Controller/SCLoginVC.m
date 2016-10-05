@@ -103,7 +103,24 @@
     [self.view endEditing:YES];
 }
 
+#pragma mark - Alert
 
+- (void)showAlertWithMessage:(NSString *)message {
+    
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:@""
+                                  message:message
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okButton = [UIAlertAction
+                                actionWithTitle:@"OK"
+                                style:UIAlertActionStyleCancel
+                                handler:^(UIAlertAction * action) {
+                                }];
+    [alert addAction:okButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -129,12 +146,14 @@
                                                andPassword:self.passwordTextField.text onSuccess:^{
                                                    
                                                    NSLog(@"LoginSuccess");
-                                               } onFailure:^(NSString* errorResponse){
+                                                   //add user to core data
+                                                   
+                                               } onFailure:^(NSDictionary* errorResponse){
 
-//                                                    NSString* errResponse = [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
-                                                   NSLog(@"Loginfailure");
+                                                   NSLog(@"Loginfailure - %@", errorResponse);
+                                                   NSString *errorMessage = [errorResponse objectForKey:@"message"];
+                                                   [self showAlertWithMessage:errorMessage];
                                                }];
-
     }
 }
 

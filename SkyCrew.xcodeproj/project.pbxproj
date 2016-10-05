@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51677D561DA5245C00EC8CE8 /* SCRosterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677D551DA5245C00EC8CE8 /* SCRosterVC.m */; };
+		51677D591DA5252700EC8CE8 /* SCProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677D581DA5252700EC8CE8 /* SCProfileVC.m */; };
 		517FFB771D9D03B4007CD10E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB761D9D03B4007CD10E /* main.m */; };
 		517FFB7A1D9D03B4007CD10E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB791D9D03B4007CD10E /* AppDelegate.m */; };
-		517FFB7D1D9D03B4007CD10E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB7C1D9D03B4007CD10E /* ViewController.m */; };
 		517FFB801D9D03B4007CD10E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517FFB7E1D9D03B4007CD10E /* Main.storyboard */; };
 		517FFB831D9D03B4007CD10E /* SkyCrew.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB811D9D03B4007CD10E /* SkyCrew.xcdatamodeld */; };
 		517FFB851D9D03B4007CD10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517FFB841D9D03B4007CD10E /* Assets.xcassets */; };
@@ -23,12 +24,14 @@
 
 /* Begin PBXFileReference section */
 		29A6EA778280FAD132F6B6EB /* Pods-SkyCrew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyCrew.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkyCrew/Pods-SkyCrew.release.xcconfig"; sourceTree = "<group>"; };
+		51677D541DA5245C00EC8CE8 /* SCRosterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCRosterVC.h; path = Controller/SCRosterVC.h; sourceTree = "<group>"; };
+		51677D551DA5245C00EC8CE8 /* SCRosterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRosterVC.m; path = Controller/SCRosterVC.m; sourceTree = "<group>"; };
+		51677D571DA5252700EC8CE8 /* SCProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCProfileVC.h; path = Controller/SCProfileVC.h; sourceTree = "<group>"; };
+		51677D581DA5252700EC8CE8 /* SCProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCProfileVC.m; path = Controller/SCProfileVC.m; sourceTree = "<group>"; };
 		517FFB721D9D03B4007CD10E /* SkyCrew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyCrew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517FFB761D9D03B4007CD10E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		517FFB781D9D03B4007CD10E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		517FFB791D9D03B4007CD10E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		517FFB7B1D9D03B4007CD10E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		517FFB7C1D9D03B4007CD10E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		517FFB7F1D9D03B4007CD10E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		517FFB821D9D03B4007CD10E /* SkyCrew.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkyCrew.xcdatamodel; sourceTree = "<group>"; };
 		517FFB841D9D03B4007CD10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,8 +138,10 @@
 				517FFB971D9D3956007CD10E /* SCRegistrationFormVC.m */,
 				517FFB991D9E60C2007CD10E /* SCLoginVC.h */,
 				517FFB9A1D9E60C2007CD10E /* SCLoginVC.m */,
-				517FFB7B1D9D03B4007CD10E /* ViewController.h */,
-				517FFB7C1D9D03B4007CD10E /* ViewController.m */,
+				51677D541DA5245C00EC8CE8 /* SCRosterVC.h */,
+				51677D551DA5245C00EC8CE8 /* SCRosterVC.m */,
+				51677D571DA5252700EC8CE8 /* SCProfileVC.h */,
+				51677D581DA5252700EC8CE8 /* SCProfileVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -274,11 +279,12 @@
 				517FFB831D9D03B4007CD10E /* SkyCrew.xcdatamodeld in Sources */,
 				517FFB981D9D3956007CD10E /* SCRegistrationFormVC.m in Sources */,
 				517FFB911D9D0475007CD10E /* SCCoreDataManager.m in Sources */,
-				517FFB7D1D9D03B4007CD10E /* ViewController.m in Sources */,
 				517FFB9E1D9E7595007CD10E /* SCServerManager.m in Sources */,
 				517FFB9B1D9E60C2007CD10E /* SCLoginVC.m in Sources */,
+				51677D561DA5245C00EC8CE8 /* SCRosterVC.m in Sources */,
 				517FFB7A1D9D03B4007CD10E /* AppDelegate.m in Sources */,
 				517FFB771D9D03B4007CD10E /* main.m in Sources */,
+				51677D591DA5252700EC8CE8 /* SCProfileVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

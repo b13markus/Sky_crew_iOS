@@ -15,17 +15,17 @@
 - (void) loginUserWithEmail:(NSString*)email
                 andPassword:(NSString*)password
                   onSuccess:(void (^)())success
-                  onFailure:(void(^)(NSString* errorResponse))failure;
+                  onFailure:(void(^)(NSDictionary *errorResponse))failure;
 
 - (void) registerUserWithFirstName:(NSString *)firstName
                           lastName:(NSString *)lastName
                              email:(NSString *)email
                           password:(NSString *)password
                passwordConfimation:(NSString *)passwordConfimation
-                             photo:(NSData *)photo
+                             photo:(NSString *)photo
                              agree:(NSString *)agree
                               type:(NSString *)type
                          onSuccess:(void (^)())success
-                         onFailure:(void(^)())failure;
+                         onFailure:(void(^)(NSDictionary *errorResponse))failure;
 
 @end
