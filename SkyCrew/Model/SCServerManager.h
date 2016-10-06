@@ -14,7 +14,7 @@
 
 - (void) loginUserWithEmail:(NSString*)email
                 andPassword:(NSString*)password
-                  onSuccess:(void (^)())success
+                  onSuccess:(void (^)(NSDictionary *responseObject))success
                   onFailure:(void(^)(NSDictionary *errorResponse))failure;
 
 - (void) registerUserWithFirstName:(NSString *)firstName
@@ -25,7 +25,7 @@
                              photo:(NSString *)photo
                              agree:(NSString *)agree
                               type:(NSString *)type
-                         onSuccess:(void (^)())success
+                         onSuccess:(void (^)(NSDictionary *responseObject))success
                          onFailure:(void(^)(NSDictionary *errorResponse))failure;
 
 @end

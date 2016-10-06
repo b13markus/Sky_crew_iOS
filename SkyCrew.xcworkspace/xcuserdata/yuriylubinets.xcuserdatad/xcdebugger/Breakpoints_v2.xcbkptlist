@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SkyCrew/Model/SCServerManager.m"
-            timestampString = "497355721.694307"
+            timestampString = "497457753.143677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "-loginUserWithEmail:andPassword:onSuccess:onFailure:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SkyCrew/Controller/SCRegistrationFormVC.m"
-            timestampString = "497354311.21646"
+            timestampString = "497371599.712842"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "-showAlertWithMessage:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,13 +42,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SkyCrew/Controller/SCRegistrationFormVC.m"
-            timestampString = "497354324.860522"
+            timestampString = "497371599.712842"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "-submitAction:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__37-[SCRegistrationFormVC submitAction:]_block_invoke_2"
+                  moduleName = "SkyCrew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuriylubinets/Documents/YuraDocuments/StarApps/SkyCrewNew/SkyCrew/Controller/SCRegistrationFormVC.m"
+                  timestampString = "497459300.513825"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "234"
+                  endingLineNumber = "234"
+                  offsetFromSymbolStart = "137">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_"
+                  moduleName = "SkyCrew"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuriylubinets/Documents/YuraDocuments/StarApps/SkyCrewNew/SkyCrew/Controller/SCRegistrationFormVC.m"
+                  timestampString = "497459300.517533"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "234"
+                  endingLineNumber = "234"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SkyCrew/Model/SCServerManager.m"
-            timestampString = "497357281.521827"
+            timestampString = "497457753.143677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-registerUserWithFirstName:lastName:email:password:passwordConfimation:photo:agree:type:onSuccess:onFailure:"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,12 +106,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SkyCrew/Model/SCServerManager.m"
-            timestampString = "497357272.907679"
+            timestampString = "497457753.143677"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-registerUserWithFirstName:lastName:email:password:passwordConfimation:photo:agree:type:onSuccess:onFailure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyCrew/Model/SCCoreDataManager.m"
+            timestampString = "497457578.306206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-createUserWithUserInfo:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkyCrew/Model/SCServerManager.m"
+            timestampString = "497457799.378191"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-loginUserWithEmail:andPassword:onSuccess:onFailure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

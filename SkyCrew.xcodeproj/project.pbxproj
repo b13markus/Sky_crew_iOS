@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		51677D561DA5245C00EC8CE8 /* SCRosterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677D551DA5245C00EC8CE8 /* SCRosterVC.m */; };
 		51677D591DA5252700EC8CE8 /* SCProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677D581DA5252700EC8CE8 /* SCProfileVC.m */; };
+		51677D971DA6630400EC8CE8 /* SCAircraft+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677D901DA6630400EC8CE8 /* SCAircraft+CoreDataClass.m */; };
+		51677D981DA6630400EC8CE8 /* SCAircraft+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677D921DA6630400EC8CE8 /* SCAircraft+CoreDataProperties.m */; };
+		51677D991DA6630400EC8CE8 /* SCUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677D941DA6630400EC8CE8 /* SCUser+CoreDataClass.m */; };
+		51677D9A1DA6630400EC8CE8 /* SCUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677D961DA6630400EC8CE8 /* SCUser+CoreDataProperties.m */; };
+		51677DA21DA6914C00EC8CE8 /* SCCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51677DA11DA6914C00EC8CE8 /* SCCoreDataManager.m */; };
 		517FFB771D9D03B4007CD10E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB761D9D03B4007CD10E /* main.m */; };
 		517FFB7A1D9D03B4007CD10E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB791D9D03B4007CD10E /* AppDelegate.m */; };
 		517FFB801D9D03B4007CD10E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517FFB7E1D9D03B4007CD10E /* Main.storyboard */; };
 		517FFB831D9D03B4007CD10E /* SkyCrew.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB811D9D03B4007CD10E /* SkyCrew.xcdatamodeld */; };
 		517FFB851D9D03B4007CD10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517FFB841D9D03B4007CD10E /* Assets.xcassets */; };
 		517FFB881D9D03B4007CD10E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517FFB861D9D03B4007CD10E /* LaunchScreen.storyboard */; };
-		517FFB911D9D0475007CD10E /* SCCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB901D9D0475007CD10E /* SCCoreDataManager.m */; };
 		517FFB981D9D3956007CD10E /* SCRegistrationFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB971D9D3956007CD10E /* SCRegistrationFormVC.m */; };
 		517FFB9B1D9E60C2007CD10E /* SCLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB9A1D9E60C2007CD10E /* SCLoginVC.m */; };
 		517FFB9E1D9E7595007CD10E /* SCServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517FFB9D1D9E7595007CD10E /* SCServerManager.m */; };
@@ -28,6 +32,16 @@
 		51677D551DA5245C00EC8CE8 /* SCRosterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRosterVC.m; path = Controller/SCRosterVC.m; sourceTree = "<group>"; };
 		51677D571DA5252700EC8CE8 /* SCProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCProfileVC.h; path = Controller/SCProfileVC.h; sourceTree = "<group>"; };
 		51677D581DA5252700EC8CE8 /* SCProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCProfileVC.m; path = Controller/SCProfileVC.m; sourceTree = "<group>"; };
+		51677D8F1DA6630400EC8CE8 /* SCAircraft+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCAircraft+CoreDataClass.h"; path = "Model/SCAircraft+CoreDataClass.h"; sourceTree = "<group>"; };
+		51677D901DA6630400EC8CE8 /* SCAircraft+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SCAircraft+CoreDataClass.m"; path = "Model/SCAircraft+CoreDataClass.m"; sourceTree = "<group>"; };
+		51677D911DA6630400EC8CE8 /* SCAircraft+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCAircraft+CoreDataProperties.h"; path = "Model/SCAircraft+CoreDataProperties.h"; sourceTree = "<group>"; };
+		51677D921DA6630400EC8CE8 /* SCAircraft+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SCAircraft+CoreDataProperties.m"; path = "Model/SCAircraft+CoreDataProperties.m"; sourceTree = "<group>"; };
+		51677D931DA6630400EC8CE8 /* SCUser+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCUser+CoreDataClass.h"; path = "Model/SCUser+CoreDataClass.h"; sourceTree = "<group>"; };
+		51677D941DA6630400EC8CE8 /* SCUser+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SCUser+CoreDataClass.m"; path = "Model/SCUser+CoreDataClass.m"; sourceTree = "<group>"; };
+		51677D951DA6630400EC8CE8 /* SCUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SCUser+CoreDataProperties.h"; path = "Model/SCUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		51677D961DA6630400EC8CE8 /* SCUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SCUser+CoreDataProperties.m"; path = "Model/SCUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		51677DA01DA6914C00EC8CE8 /* SCCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCCoreDataManager.h; path = Model/SCCoreDataManager.h; sourceTree = "<group>"; };
+		51677DA11DA6914C00EC8CE8 /* SCCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCCoreDataManager.m; path = Model/SCCoreDataManager.m; sourceTree = "<group>"; };
 		517FFB721D9D03B4007CD10E /* SkyCrew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyCrew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		517FFB761D9D03B4007CD10E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		517FFB781D9D03B4007CD10E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,8 +51,6 @@
 		517FFB841D9D03B4007CD10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		517FFB871D9D03B4007CD10E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		517FFB891D9D03B4007CD10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		517FFB8F1D9D0475007CD10E /* SCCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCCoreDataManager.h; path = Model/SCCoreDataManager.h; sourceTree = "<group>"; };
-		517FFB901D9D0475007CD10E /* SCCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCCoreDataManager.m; path = Model/SCCoreDataManager.m; sourceTree = "<group>"; };
 		517FFB961D9D3956007CD10E /* SCRegistrationFormVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCRegistrationFormVC.h; path = Controller/SCRegistrationFormVC.h; sourceTree = "<group>"; };
 		517FFB971D9D3956007CD10E /* SCRegistrationFormVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRegistrationFormVC.m; path = Controller/SCRegistrationFormVC.m; sourceTree = "<group>"; };
 		517FFB991D9E60C2007CD10E /* SCLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCLoginVC.h; path = Controller/SCLoginVC.h; sourceTree = "<group>"; };
@@ -67,6 +79,28 @@
 				EAB3F0BDA7F2CF79A2FF2327 /* libPods-SkyCrew.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51677D9B1DA690AD00EC8CE8 /* Aircraft */ = {
+			isa = PBXGroup;
+			children = (
+				51677D8F1DA6630400EC8CE8 /* SCAircraft+CoreDataClass.h */,
+				51677D901DA6630400EC8CE8 /* SCAircraft+CoreDataClass.m */,
+				51677D911DA6630400EC8CE8 /* SCAircraft+CoreDataProperties.h */,
+				51677D921DA6630400EC8CE8 /* SCAircraft+CoreDataProperties.m */,
+			);
+			name = Aircraft;
+			sourceTree = "<group>";
+		};
+		51677D9C1DA690C800EC8CE8 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				51677D931DA6630400EC8CE8 /* SCUser+CoreDataClass.h */,
+				51677D941DA6630400EC8CE8 /* SCUser+CoreDataClass.m */,
+				51677D951DA6630400EC8CE8 /* SCUser+CoreDataProperties.h */,
+				51677D961DA6630400EC8CE8 /* SCUser+CoreDataProperties.m */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 		517FFB691D9D03B4007CD10E = {
@@ -111,10 +145,12 @@
 			isa = PBXGroup;
 			children = (
 				517FFB811D9D03B4007CD10E /* SkyCrew.xcdatamodeld */,
-				517FFB8F1D9D0475007CD10E /* SCCoreDataManager.h */,
-				517FFB901D9D0475007CD10E /* SCCoreDataManager.m */,
 				517FFB9C1D9E7595007CD10E /* SCServerManager.h */,
 				517FFB9D1D9E7595007CD10E /* SCServerManager.m */,
+				51677DA01DA6914C00EC8CE8 /* SCCoreDataManager.h */,
+				51677DA11DA6914C00EC8CE8 /* SCCoreDataManager.m */,
+				51677D9B1DA690AD00EC8CE8 /* Aircraft */,
+				51677D9C1DA690C800EC8CE8 /* User */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -277,14 +313,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				517FFB831D9D03B4007CD10E /* SkyCrew.xcdatamodeld in Sources */,
+				51677D991DA6630400EC8CE8 /* SCUser+CoreDataClass.m in Sources */,
+				51677D971DA6630400EC8CE8 /* SCAircraft+CoreDataClass.m in Sources */,
 				517FFB981D9D3956007CD10E /* SCRegistrationFormVC.m in Sources */,
-				517FFB911D9D0475007CD10E /* SCCoreDataManager.m in Sources */,
+				51677DA21DA6914C00EC8CE8 /* SCCoreDataManager.m in Sources */,
 				517FFB9E1D9E7595007CD10E /* SCServerManager.m in Sources */,
 				517FFB9B1D9E60C2007CD10E /* SCLoginVC.m in Sources */,
+				51677D9A1DA6630400EC8CE8 /* SCUser+CoreDataProperties.m in Sources */,
 				51677D561DA5245C00EC8CE8 /* SCRosterVC.m in Sources */,
 				517FFB7A1D9D03B4007CD10E /* AppDelegate.m in Sources */,
 				517FFB771D9D03B4007CD10E /* main.m in Sources */,
 				51677D591DA5252700EC8CE8 /* SCProfileVC.m in Sources */,
+				51677D981DA6630400EC8CE8 /* SCAircraft+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

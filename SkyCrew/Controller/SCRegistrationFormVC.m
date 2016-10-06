@@ -8,6 +8,9 @@
 
 #import "SCRegistrationFormVC.h"
 #import "SCServerManager.h"
+#import "SCUser+CoreDataProperties.h"
+#import <MagicalRecord/MagicalRecord.h>
+
 
 @interface SCRegistrationFormVC () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -31,6 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
     [self makeCornerRoundingForElement:self.userPhotoImageView];
     [self makeCornerRoundingForElement:self.firstNameTextField];
@@ -220,7 +224,7 @@
                                                              photo:userPhoto
                                                              agree:agree
                                                               type:type
-                                                         onSuccess:^{
+                                                         onSuccess:^(NSDictionary *responseObject){
                                                              
                                                              
                                                          } onFailure:^(NSDictionary* errorResponse){

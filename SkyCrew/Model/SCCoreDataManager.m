@@ -2,103 +2,88 @@
 //  SCCoreDataManager.m
 //  SkyCrew
 //
-//  Created by Yuriy Lubinets on 9/29/16.
+//  Created by Yuriy Lubinets on 10/6/16.
 //  Copyright © 2016 StarApps. All rights reserved.
 //
 
 #import "SCCoreDataManager.h"
+#import <MagicalRecord/MagicalRecord.h>
+#import "SCUser+CoreDataProperties.h"
+#import "SCAircraft+CoreDataProperties.h"
 
 @implementation SCCoreDataManager
 
-+(SCCoreDataManager *)sharedManager {
++ (SCCoreDataManager *)sharedManager {
     static SCCoreDataManager* manager = nil;
-    
+
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[SCCoreDataManager alloc]init];
     });
-    
+
     return manager;
 }
 
-#pragma mark - Core Data stack
-
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize managedObjectModel = _managedObjectModel;
-@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-
-- (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "SA.SkyCrew" in the application's documents directory.
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-}
-
-- (NSManagedObjectModel *)managedObjectModel {
-    // The managed object model for the application. It is a fatal error for the application not to be able to find and load its model.
-    if (_managedObjectModel != nil) {
-        return _managedObjectModel;
-    }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"SkyCrew" withExtension:@"momd"];
-    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-    return _managedObjectModel;
-}
-
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-    // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it.
-    if (_persistentStoreCoordinator != nil) {
-        return _persistentStoreCoordinator;
-    }
+- (void)createUserWithUserInfo:(NSDictionary *)infoDictionary {
     
-    // Create the coordinator and store
+    SCUser* user = [SCUser MR_createEntity];
+    NSLog(@"!!!!!!!!!!!!!!%@", infoDictionary);
     
-    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"SkyCrew.sqlite"];
-    NSError *error = nil;
-    NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
-        // Report any error we got.
-        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-        dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
-        dict[NSLocalizedFailureReasonErrorKey] = failureReason;
-        dict[NSUnderlyingErrorKey] = error;
-        error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:9999 userInfo:dict];
-        // Replace this with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
+    user.userId = [infoDictionary objectForKey:@"id"];
+    user.userKey = [infoDictionary objectForKey:@"userKey"];
+    user.firstName = [infoDictionary objectForKey:@"firstName"];
+    user.lastName = [infoDictionary objectForKey:@"lastName"];
+    user.email = [infoDictionary objectForKey:@"email"];
+    user.photoUrl = [infoDictionary objectForKey:@"photoUrl"];
+    user.thumbnailUrl = [infoDictionary objectForKey:@"thumbnailUrl"];
+    user.aboutMe = [infoDictionary objectForKey:@"aboutMe"];
+    user.isAirlineMember = [infoDictionary objectForKey:@"isAirlineMember"];
+    user.type = [infoDictionary objectForKey:@"type"];
+    user.activated = [infoDictionary objectForKey:@"activated"];
+    user.status = [infoDictionary objectForKey:@"status"];
+    user.icao = [infoDictionary objectForKey:@"icao"];
+    user.iata = [infoDictionary objectForKey:@"iata"];
+    user.cpUsername = [infoDictionary objectForKey:@"cpUsername"];
+    user.cpPassword = [infoDictionary objectForKey:@"cpPassword"];
+    user.airlines = [infoDictionary objectForKey:@"airlines"];
+    user.airport = [infoDictionary objectForKey:@"airport"];
+    user.city = [infoDictionary objectForKey:@"city"];
+    user.airportCountry = [infoDictionary objectForKey:@"airportCountry"];
+    user.airportTimezone = [infoDictionary objectForKey:@"airportTimezone"];
+    user.countryCode = [infoDictionary objectForKey:@"countryCode"];
+    user.currencyName = [infoDictionary objectForKey:@"currencyName"];
+    user.currencyCode = [infoDictionary objectForKey:@"currencyCode"];
+    user.rosterFiletype = [infoDictionary objectForKey:@"rosterFiletype"];
+    user.cpAirlineIata = [infoDictionary objectForKey:@"cpAirlineIata"];
+    user.cpRosterTimetype = [infoDictionary objectForKey:@"cpRosterTimetype"];
+    user.cpRosterDatetimeFormat = [infoDictionary objectForKey:@"cpRosterDatetimeFormat"];
+    user.rosterDatetimeFormatJava = [infoDictionary objectForKey:@"rosterDatetimeFormatJava"];
+    user.landingPageUrl = [infoDictionary objectForKey:@"landingPageUrl"];
+    user.landingPageId = [infoDictionary objectForKey:@"landingPageId"];
+    user.memoParser = [infoDictionary objectForKey:@"memoParser"];
+    user.jobPosition = [infoDictionary objectForKey:@"jobPosition"];
+    user.deadline = [infoDictionary objectForKey:@"deadline"];
+    user.period = [infoDictionary objectForKey:@"period"];
+    user.flightStatus = [infoDictionary objectForKey:@"flightStatus"];
+    user.airportCity = [infoDictionary objectForKey:@"airportCity"];
+    user.cpUrl = [infoDictionary objectForKey:@"cpUrl"];
+    user.canAutoLogin = [infoDictionary objectForKey:@"canAutoLogin"];
+    user.canParseRoster = [infoDictionary objectForKey:@"canParseRoster"];
+    user.canParseMemo = [infoDictionary objectForKey:@"canParseMemo"];
+    user.importStatus = [infoDictionary objectForKey:@"importStatus"];
+    user.autoImportStatus = [infoDictionary objectForKey:@"autoImportStatus"];
+    NSArray *arrayWithAircrafts = [infoDictionary objectForKey:@"aircraft"];
+    NSMutableSet *setWithAircrafts = [[NSMutableSet alloc]init];
+    for (NSDictionary *dict in arrayWithAircrafts) {
+        
+        SCAircraft* aircraft = [SCAircraft MR_createEntity];
+        aircraft.aircraftId = [dict objectForKey:@"id"];
+        aircraft.name = [dict objectForKey:@"name"];
+        [setWithAircrafts addObject:aircraft];
     }
+    [user addAircraft:[setWithAircrafts copy]];
     
-    return _persistentStoreCoordinator;
+    NSManagedObjectContext *context = user.managedObjectContext;
+    [context MR_saveToPersistentStoreAndWait];
 }
-
-
-- (NSManagedObjectContext *)managedObjectContext {
-    // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
-    if (_managedObjectContext != nil) {
-        return _managedObjectContext;
-    }
-    
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (!coordinator) {
-        return nil;
-    }
-    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-    [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-    return _managedObjectContext;
-}
-
-#pragma mark - Core Data Saving support
-
-- (void)saveContext {
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
-    if (managedObjectContext != nil) {
-        NSError *error = nil;
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
-    }
-}
-
 @end

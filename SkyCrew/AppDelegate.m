@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SCCoreDataManager.h"
+#import <MagicalRecord/MagicalRecord.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"SkyCrew.xcdatamodeld"];
+       
     return YES;
 }
 
@@ -42,7 +44,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
-    [[SCCoreDataManager sharedManager]saveContext];
 }
 
 

@@ -9,6 +9,7 @@
 #import "SCLoginVC.h"
 #import "SCRegistrationFormVC.h"
 #import "SCServerManager.h"
+#import "SCCoreDataManager.h"
 
 @interface SCLoginVC ()
 
@@ -143,11 +144,15 @@
     if (self.loginTextField.text.length != 0 && self.passwordTextField.text.length != 0) {
         
         [[SCServerManager sharedManager]loginUserWithEmail:self.loginTextField.text
-                                               andPassword:self.passwordTextField.text onSuccess:^{
+                                               andPassword:self.passwordTextField.text
+                                                 onSuccess:^(NSDictionary *responseObject){
                                                    
                                                    NSLog(@"LoginSuccess");
-                                                   //add user to core data
-                                                   
+                                                     [[SCCoreDataManager sharedManager]createUserWithUserInfo:responseObject];
+                                                     
+                                                     
+                                        
+                                                     
                                                } onFailure:^(NSDictionary* errorResponse){
 
                                                    NSLog(@"Loginfailure - %@", errorResponse);

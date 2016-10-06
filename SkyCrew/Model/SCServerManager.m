@@ -44,7 +44,7 @@
 
 - (void) loginUserWithEmail:(NSString *)email
               andPassword:(NSString *)password
-                onSuccess:(void (^)())success
+                onSuccess:(void (^)(NSDictionary *responseObject))success
                 onFailure:(void(^)(NSDictionary* errorResponse))failure {
     
     NSDictionary* params = @{
@@ -59,7 +59,15 @@
                      progress:nil
                       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-                          NSLog(@"%@", responseObject);
+                          NSError* parseError;
+//                          NSData *responseData = responseObject[AFNetworkingOperationFailingURLResponseDataErrorKey];
+                          NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                                                       options:kNilOptions
+                                                                                         error:&parseError];
+                          if (success) {
+                              
+                              success(responseDict);
+                          }
                           
         
                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -85,7 +93,7 @@
                              photo:(NSString *)photo
                              agree:(NSString *)agree
                               type:(NSString *)type
-                         onSuccess:(void (^)())success
+                         onSuccess:(void (^)(NSDictionary *responseObject))success
                          onFailure:(void(^)(NSDictionary *errorResponse))failure {
 
     NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:
